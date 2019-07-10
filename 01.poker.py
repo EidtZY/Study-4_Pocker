@@ -49,19 +49,23 @@ f.close()
 
 numOfPlayers = 3
 cardsForPlayers = int(len(shuffledList)/numOfPlayers)
+print('--debug: %d players,everyone has %d cards' % (numOfPlayers,cardsForPlayers))
 
 player1 = []
 for i in range(cardsForPlayers):
     pickedCards = random.choice(shuffledList)
     player1.append(pickedCards)
     shuffledList.remove(pickedCards)
+print('\n--debug:player1''s %d cards is--%s:' % (len(shuffledList),shuffledList))
 
 player2 = []
 for i in range(cardsForPlayers):
     pickedCards = random.choice(shuffledList)
     player1.append(pickedCards)
     shuffledList.remove(pickedCards)
+print('\n--debug:player2''s %d cards is--%s:' % (len(shuffledList),shuffledList))
 
 player3 = []
 for cards in shuffledList:
     player3.append(Cards)
+print('\n--debug:player3''s %d cards is--%s:' % (len(shuffledList),shuffledList))
